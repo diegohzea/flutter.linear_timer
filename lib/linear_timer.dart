@@ -93,7 +93,7 @@ class LinearTimerController {
   }
 
   // Sets the duration for the timer
-  set _duration(Duration duration) {
+  set setDuration(Duration duration) {
     _controller.duration = duration;
   }
 
@@ -171,7 +171,7 @@ class _LinearTimerState extends State<LinearTimer>
       _timerController = widget.controller!;
     }
 
-    _timerController._duration = widget.duration;
+    _timerController.setDuration = widget.duration;
     _timerController._subscribe(this);
 
     if (widget.controller == null) {
