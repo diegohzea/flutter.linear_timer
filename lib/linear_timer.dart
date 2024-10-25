@@ -54,7 +54,11 @@ class LinearTimerController {
   /// ```
   LinearTimerController(TickerProvider tickerProvider) {
     _controller = AnimationController(
-        lowerBound: 0, upperBound: 1, vsync: tickerProvider);
+      lowerBound: 0,
+      upperBound: 1,
+      vsync: tickerProvider,
+      animationBehavior: AnimationBehavior.preserve,
+    );
 
     _controller
       ..addListener(() {
